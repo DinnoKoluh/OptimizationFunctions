@@ -1,0 +1,103 @@
+function [s] = backtrackingBasic(f, x_k, deltaX_k, g_k)
+	Funckija koja prima f. handle "f", k-ti vektor tacaka "x_k", k-tu vrijednost deltaX i k-tu vrijednost gradijenta "g_k".
+	Vraca koristenje osnovne backtracking metode vrijednost koraka "s".
+
+function [s] = backtrackingCubic(f, x_k, deltaX_k, g_k)
+	Funckija koja prima f. handle "f", k-ti vektor tacaka "x_k", k-tu vrijednost deltaX i k-tu vrijednost gradijenta "g_k".
+	Vraca koristenje kubicne backtracking metode vrijednost koraka "s".
+ 
+function [x_min, iter, error] = bisectionMethod(f_handle, a, b, eps, maxIter, plt)
+	Funkcija koja prima f. handler "f_handle", granice intervala "a" i "b", max. gresku "eps", max. broj iter "maxIter"
+	i varijablu "plt" koja ce plotati trazenje minimuma date funkcije. Funkcija vraca trazenu tacku minimuma "x_min", 
+	broj iteracija koje su se izvrsile "iter", i gresku "error".
+
+function [s] = calculateStep(f_handle, x, deltaX, g, method)
+	Funkcija koja zavisno koja se metoda (tip string) zada za trazenje koraka "s" poziva funkcije za tu metodu i vraca nazad korak "s".
+	Ostali ulazni paramteri su isti kao kod funkcija koje racunaju korak "s".
+	Moguce metode su:
+	met1 = 'ExactLineSearch'
+	met2 = 'BasicBacktrackingLineSearch'
+	met3 = 'CubicBacktrackingLineSearch'
+
+function [y] = computeHandleFunctions(f_handle, x)
+	Funkcija koja prima vektor celija sa f. hendlerima i vektor tacaka "x" u kojima trazimo vrijednosti tih funkcija.
+	Funkcija vraca vektor vrijednosti primljenih funkcija u tackama "x".
+
+function [out] = cubic(f_k, d_k, f_s, s, f_p, s_p)
+	Pomocna funkcija u funkciji za 'CubicBacktrackingLineSearch'. Pogledati definiciju nacina za 'CubicBacktrackingLineSearch' 
+	za razumijevanje ulaznih i izlaznih varijabli.
+
+function [y] = derivativeEq (f)
+	Funkcija koja prima f. hendler "f" i vraca f. hendler izvoda funkcije "f" za bilo koju tacku x. Dakle, y(x) ce dati izvod u tacki x.
+
+function [s] = exactLineSearch(f)
+	Funkcija koja prima f. handler "f" i vraca optimalnu vrijednost koraka "s". To radi koristenjem Newton-ove metode.
+
+function [] = functionPlot(f, L1, L2, option, N)
+	Funkcija za 3D plotanje. Funckija koja prima f. handler "f", intervale "L1" i "L2", string opcije plotanja "option":
+	op1 = 'mesh';
+        op2 = 'surface';
+        op3 = 'contour';
+	i cijeli broj "N" za broj kontura.
+
+function [x_min, iter, error] = gradDescent(f_handle, x_0, eps, maxIter, method, plt)
+	Funkcija koja prima f. handle "f_handle", pocetnu vektor tacaka "x_0", max. dozvoljenu gresku "eps", max. dozvoljeni broj iteracija "maxIter",
+	string "method" koji na osnovu njegove vrijednosti moze naci vrijednost koraka "s" na vise nacina:
+	method = 'ExactLineSearch' 
+	method = 'BasicBacktrackingLineSearch'
+	i prima varijablu "plt" koja ako je jednaka "1" plota put gradijentnog spusta.
+	Funkcija vraca vektor tacaka minimuma "x_min", broj izvrsenih iteracije "iter" i gresku "error".
+
+function [grad] = gradient(f, x)
+	Funkcija koja prima f. handler "f" i vektor tacaka "x" i vraca gradijent "grad" funkcije "f" u tackama "x".
+
+function [H] = hessian(f, x)
+	Funkcija koja prima f.handler "f" i vektor tacka "x". Vraca matricu Hesijana "H" u tackama "x".
+
+function [J] = jacobian(f_handle, x)
+	Funkcija koja prima vektor celija sa f. hendlerima "f_handle" i vektor tacaka "x". Vraca Jakobijan ulaznih varijabli.
+	Dimenzije vektora funkcija i vektora tacaka moraju biti isti - kvadratni Jakobijan.
+
+function [] = markerPlot(x,y,z,i)
+	Funkcija koja prima tri tacke funkcije dvije varijable i broj "i" i plota na grafiku marker koji sarži broj "i"-1 unutar njega.
+
+function [x_min, iter, error] = multiVarNR(f_handle, x_0, maxIter, eps)
+	Funckija vrsi multidimenzionalni NR algoritam. Prima vektor celija sa f. hendlerima, vektor pocetnih tacaka "x_0",
+	maksimalan broj iteracija "maxIter" i dozvoljenu gresku "eps". Vraca vektor rjesenja datih funkcija "x_min", izvrseniih iteracija "iter", i 
+	gresku "error" na kraju algoritma. 
+
+function [x, iter, error] = newtonsMethod(f_handle, x_0, eps, maxIter)
+	Funkcija prima f. handler "f_handle", pocetnu tacku "x_0", max. gresku "eps" i max. broj iteracija "maxIter".
+	Vraca trazenu tacku minimuma "x", broj iteracije "iter" i gresku "error".
+
+function [x_min, iter, error] = newtonsMultiVarMethod(f_handle, x_0, eps, maxIter, method, plt)
+	Funkcija koja prima f. handle "f_handle", pocetnu vektor tacaka "x_0", max. dozvoljenu gresku "eps", max. dozvoljeni broj iteracija "maxIter",
+	string "method" koji na osnovu njegove vrijednosti moze naci vrijednost koraka "s" na vise nacina:
+	method = 'ExactLineSearch' 
+	method = 'BasicBacktrackingLineSearch'
+	i prima varijablu "plt" koja ako je jednaka "1" plota put Newtnovog metoda za multivarijabilne funkcije.
+	Funkcija vraca vektor tacaka minimuma "x_min", broj izvrsenih iteracije "iter" i gresku "error".
+
+function [y] = nthDerivativeEq(f, n)
+	Prima f. hendler "f" i broj "n" kao n-ti izvod. Vraca f. handler n-tog izvod funkcije "f". Dakle y(x) daje n-ti izvod funkcije f u tacki x.
+
+function [x_min, iter, error] = oneVarNR(f, x_0, maxIter, eps)
+	Radi isto sto i multiVarNR samo za jednu dimenziju tj. jednu funkciju.
+
+function [y] = partialDerivativeEq(f, n, i)
+	Prima f. hendler "f", broj varijabli od kojih zavisi "f" i broj "i". Vraca f.handler parcijalnog izvoda funkcije "f" u odnosu na i-tu varijablu.
+	Dakle y(x) ce dati parcijalni izvod funkcije f u odnosu na i-tu varijablu.
+
+function [ ] = plotSteps(f_handle, x, x_dummy, i, s_method, solve_method)	
+	Funkcija koja prima f. handler "f_handle" i dvije tacke "x" i "x_dummy" i plota liniju izmedju te dvije tacke sa markerima na njihovim
+	krajevima pomocu funkcije "markerPlot". Varijable s_method je string koji ce na grafiku biti ispisina metoda trazenja koraka s, a solve_method
+	je string varijabla koja ce biti ispisana na grafiku metoda rjesenja jednacine sa mogucnostima: 'gradDescent' i 'newtonsMultiVarMethod'.
+
+function [x_min, iter, error] = quadraticInterpolMethod(f_handle, x_L, x_r, eps, maxIter)
+	Prima f. handler "f_handle", donju i gornju granicu intervala "x_L" i "x_r", max. dozvoljenu gresku "eps", max. broj 
+	iteracija "maxIter". Koristenjem metode kvadratne interpolacije vraÄ‡a minimum funkcije "x_min", broj izvrsenih iteracija "iter" i 
+	gresku "error".
+
+function [out] = range(s, a, b)
+	Pomocna funkcija u funkciji za 'CubicBacktrackingLineSearch'. Pogledati definiciju nacina za 'CubicBacktrackingLineSearch' 
+	za razumijevanje ulaznih i izlaznih varijabli.
