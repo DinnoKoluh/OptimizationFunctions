@@ -5,4 +5,4 @@ method3 = 'CubicBacktrackingLineSearch';
 op1 = 'mesh';
 op2 = 'surface';
 op3 = 'contour';
-N = 100; % broj kontura
+N = 100; % number of contours

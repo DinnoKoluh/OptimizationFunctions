@@ -15,6 +15,7 @@ for i = 1:maxIter
         return;
     end
     
+    %s = 0.02;
     s = calculateStep(f_handle, x, deltaX, g, method);
     
     x_previous = x;
