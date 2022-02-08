@@ -1,7 +1,7 @@
 x_0 = [-2; -1];
 eps = 1e-3;
 n = 100;
-% unosenje funckija 
+% Function input 
 fun1 = @(x) x(1,1)^2+4*x(1,1)+x(2,1)^2-5;
 fun2 = @(x) 4*x(1,1)^2+9*x(2,1)^2 - 36;
 fun3 = @(x) x(1,1)*sin(pi*x(1,1))-exp(-x(1,1));

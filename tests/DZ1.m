@@ -4,10 +4,10 @@ init;
 maxIter = 500;
 eps = 0.005;
 
-%Plotanje
+% Plotting
 f_plot = @(x1, x2) x1.^2 + x2.^2-2*x1.*x2;
 
-% Gradijentni metod
+% Gradient Method
 fun1 = @(x) x(1,1).^2 + x(2,1).^2-2*x(1,1)*x(2,1);
 x_0 = [2;-2];
 

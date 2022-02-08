@@ -4,7 +4,7 @@ init;
 maxIter = 500;
 eps = 0.005;
 
-%Plotanje nema smisla za 4D funkcije
+% No sense to plot a 4D function
 % f_plot = @(x1, x2, x3) x1.^2 + 2*x2.^2 + 2*x3.^2 + 2*x1.*x2 + 2*x2.*x3;
 % functionPlot(f_plot, -3, 3, op1, N);
 

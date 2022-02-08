@@ -1,5 +1,5 @@
 addpath(strcat(cd,'\Functions'))
-% Metod kvadratne interpolacije % 
+% Quadratic interpolation method % 
 fun = @(x) x.^3-2*x-5;
 eps = 1e-5;
 maxIter = 50;

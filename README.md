@@ -1,17 +1,26 @@
 # Optimization functions
-A repository containing games different "simple" games to play.
 
-<h3><p align="center"> connect4 </p></h3>
+In the folder "functions" all the implemented optimization functions can be found.
+
+In the folder "tests" all the testing scripts can be found.
+
+Take a look at the "init.m" script in which the options for the functions can be found 
+(for example: number of contours on the plot, method for finding the minimum,
+methods for finding the step s). On the basis of the "init.m" script change the method of solving
+and plotting.
+
 <p align="center">
-  <img alt="connect4_sc" src="images\connect4_sc.jpg" width="30%">
+  <img alt="fig1" src="images\fig1.svg" width="30%">
 </p>
 
-<h3><p align="center"> snake </p></h3>
 <p align="center">
-  <img alt="snake_sc" src="images\snake_sc.jpg" width="45%">
+  <img alt="fig2" src="images\fig2.svg" width="45%">
 </p>
 
-<h3><p align="center"> tic_tac_toe </p></h3>
 <p align="center">
-  <img alt="tic_tac_toe_sc" src="images\tic_tac_toe_sc.jpg" width="30%">
+  <img alt="fig3" src="images\fig1.svg" width="30%">
+</p>
+
+<p align="center">
+  <img alt="fig4" src="images\fig4.svg" width="30%">
 </p>
